@@ -52,3 +52,26 @@ class Solution2:
                 maxsum = currsum
         return maxsum / k
 
+class Solution3:
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+        average = []
+        _sum, start = 0, 0
+        for end in range(len(nums)):
+            _sum += nums[end]  # add the next element
+
+            if end >= k - 1:
+                average.append(_sum / k)  # calculate the average
+                _sum -= nums[start]  # subtract the element going out
+                start += 1  # slide the window
+
+        return max(average)
+
+class Solution4:
+    """Similar to Solution2, just written in a way that seems more clear that all elements are checked... k:len(nums)"""
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+        maxsum = currsum = sum(nums[:k])
+        for i in range(k,len(nums)):
+            currsum += nums[i] - nums[i-k]
+            if currsum > maxsum:
+                maxsum = currsum
+        return maxsum / k
