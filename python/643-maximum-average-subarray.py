@@ -67,7 +67,8 @@ class Solution3:
         return max(average)
 
 class Solution4:
-    """Similar to Solution2, just written in a way that seems more clear that all elements are checked... k:len(nums)"""
+    """BEST RESULTS.
+    Similar to Solution2, just written in a way that seems more clear that all elements are checked... k:len(nums)"""
     def findMaxAverage(self, nums: List[int], k: int) -> float:
         maxsum = currsum = sum(nums[:k])
         for i in range(k,len(nums)):
