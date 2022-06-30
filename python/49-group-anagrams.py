@@ -43,7 +43,8 @@ class Solution1:
                 charCount[ord(c)-ord("a")] += 1
             
             ans[tuple(charCount)].append(s)
-        
+
+        # format from dict_values -> list
         return list(ans.values())
 
 
