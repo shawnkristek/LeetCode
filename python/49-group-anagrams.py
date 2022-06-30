@@ -1,4 +1,4 @@
-from collections import Counter
+from collections import Counter, defaultdict
 
 class Solution:
     def groupAnagrams(strs: list[str]) -> list[list[str]]:
@@ -31,6 +31,22 @@ class Solution:
 
         return output 
 
+class Solution1:
+    def groupAnagrams(strs: list[str]) -> list[list[str]]:
+        ans = defaultdict(list) # charCount -> list[anagrams]
+
+        for s in strs:
+            charCount = [0] * 26
+
+            # count chars and map to index
+            for c in s:
+                charCount[ord(c)-ord("a")] += 1
+            
+            ans[tuple(charCount)].append(s)
+        
+        return list(ans.values())
+
+
 #test
 strs = ["eat",
         "tea",
@@ -40,4 +56,4 @@ strs = ["eat",
         "bat",
         ]
 
-print(Solution.groupAnagrams(strs))
+print(Solution1.groupAnagrams(strs))
