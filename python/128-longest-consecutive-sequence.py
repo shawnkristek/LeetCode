@@ -5,12 +5,13 @@ class Solution:
         longest = 0
         
         # loop thru nums checking and counting consecutive elements
-        for n in nums:
+        for n in numSet: # corrected to search set, significant performance improvement
             if (n-1) not in numSet:
                 length = 1
                 while n + length in numSet:
                     length += 1
-                longest = max(longest, length)
+                # passing vals as list to max improved performance
+                longest = max([longest, length])
                 
         return longest
 
