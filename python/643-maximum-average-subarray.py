@@ -1,14 +1,5 @@
-"""
-You are given an integer array nums consisting of n elements, and an integer k.
-Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.
-
-SLIDING WINDOW
-"""
-from regex import W
-
-
 class Solution:
-    def findMaxAverage(self, nums: List[int], k: int) -> float:
+    def findMaxAverage(nums: list[int], k: int) -> float:
         #initialize sum and average to 0
         sum = 0.0 
 
@@ -31,7 +22,7 @@ class Solution:
         return avg
 
 class Solution1:
-    def findMaxAverage(self, nums: List[int], k: int) -> float:
+    def findMaxAverage(nums: list[int], k: int) -> float:
         # intialize sum and maxavg to first values
         sum = sum(nums[0:k])
         maxavg = sum / k
@@ -44,7 +35,7 @@ class Solution1:
         
         return maxavg
 class Solution2:
-    def findMaxAverage(self, nums: List[int], k: int) -> float:
+    def findMaxAverage(nums: list[int], k: int) -> float:
         maxsum = currsum = sum(nums[0:k])
         for i in range(0, len(nums)-k):
             currsum += nums[i+k] - nums[i]
@@ -53,7 +44,7 @@ class Solution2:
         return maxsum / k
 
 class Solution3:
-    def findMaxAverage(self, nums: List[int], k: int) -> float:
+    def findMaxAverage(nums: list[int], k: int) -> float:
         average = []
         _sum, start = 0, 0
         for end in range(len(nums)):
@@ -69,7 +60,7 @@ class Solution3:
 class Solution4:
     """BEST RESULTS.
     Similar to Solution2, just written in a way that seems more clear that all elements are checked... k:len(nums)"""
-    def findMaxAverage(self, nums: List[int], k: int) -> float:
+    def findMaxAverage(nums: list[int], k: int) -> float:
         maxsum = currsum = sum(nums[:k])
         for i in range(k,len(nums)):
             currsum += nums[i] - nums[i-k]
