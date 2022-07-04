@@ -67,3 +67,12 @@ class Solution4:
             if currsum > maxsum:
                 maxsum = currsum
         return maxsum / k
+
+# test
+cases = [
+    ([1,12,-5,-6,50,3], 4, 12.75),
+    ([5], 1, 5.0)
+]
+
+for nums,k,solution in cases:
+    print(Solution4.findMaxAverage(nums,k) == solution)
