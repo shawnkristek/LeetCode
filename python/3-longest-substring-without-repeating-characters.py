@@ -17,15 +17,30 @@ class Solution:
             
         return maxlength
 
+class Solution1:
+    def lengthOfLongestSubstring(s: str) -> int:
+        maxLength = 0
+        charSet = set()
+        left = 0
+
+        for right in range(len(s)):
+            while s[right] in charSet:
+                charSet.remove(s[left])
+                left += 1
+            charSet.add(s[right])
+            maxLength = max(maxLength, right - left + 1)
+        
+        return maxLength
 
 
 #test
-ss = ["abcabcbb",
-    "bbbbb",
-    "pwwkew",
-    "aab",
-    "",
-    "dvdf"]
+tests = [
+    ("abcabcbb", 3),
+    ("bbbbb", 1),
+    ("pwwkew", 3),
+    ("aab", 2),
+    ("", 0),
+    ("dvdf", 3)]
 
-for s in ss:
-    print(Solution.lengthOfLongestSubstring(s))
+for s, solution in tests:
+    print(Solution1.lengthOfLongestSubstring(s) == solution)
