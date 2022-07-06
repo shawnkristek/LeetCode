@@ -31,8 +31,7 @@ class Solution1:
 class Solution2:
     def maxProfit(prices: list[int]) -> int:
         buy = prices[0]
-        sell = prices[0] - buy
-        profit = sell - buy
+        profit = 0
 
         for p in prices[1:]:
             if (p - buy) > profit:
