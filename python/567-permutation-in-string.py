@@ -14,15 +14,15 @@ class Solution:
       window[s2[right]] += 1
 
       # shrink window if longer than s1
-      if right - left > k:
+      if right - left  + 1 > k:
         if window[s2[left]] == 1:
           window.pop(s2[left])
         else:
           window[s2[left]] -= 1
-          left += 1
+
+        left += 1
       
       # check for permutation
-      print(window)
       if window == s1hash:
         return True
 
