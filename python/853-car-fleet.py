@@ -5,6 +5,7 @@ class Solution:
             cars.append([p, (target - p) / speed[i]])
 
         stack = []        
+        # check cars in reverse position order (greatest to least)
         for p,t in sorted(cars)[::-1]:
             # don't add to stack if fleet forms
             ### time-to-target < than car ahead
