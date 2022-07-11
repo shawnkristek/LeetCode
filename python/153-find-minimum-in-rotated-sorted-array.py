@@ -26,6 +26,25 @@ class Solution:
         
         return minimum
 
+class Solution1:
+    def findMin(nums: list[int]) -> int:
+        minimum = nums[0]
+        l, r = 0, len(nums) - 1
+
+        while l <= r:
+            if nums[l] < nums[r]:
+                minimum = min(minimum, nums[l])
+                break
+
+            m = (l + r) // 2
+            minimum = min(minimum, nums[m])
+            if nums[m] >= nums[l]:
+                l = m + 1
+            else:
+                r = m - 1
+        
+        return minimum
+
 # test
 tests = [ 
     ([3,4,5,1,2], 1),
@@ -35,4 +54,4 @@ tests = [
 ]
 
 for nums,solution in tests:
-    print(Solution.findMin(nums) == solution)
+    print(Solution1.findMin(nums) == solution)
