@@ -15,10 +15,11 @@ class ListNode:
     def __repr__(self):
         return str(self.values())
 
-    def build(self, values: list[int]): 
+    def build(self, values: list[int]) -> 'ListNode':
         '''
         Given an array of ints,
         Return a linked-list 
+        [n1, n2, n3] -> n1->n2->n3
         '''
         next = None
         for v in reversed(values):
