@@ -1,6 +1,7 @@
 from reuse import TreeNode
 
 class Solution:
+    # Fails test with one child node
     def invertTree(root: TreeNode) -> TreeNode:
         stack = [root] if root else []
 
