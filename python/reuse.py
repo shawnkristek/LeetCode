@@ -32,3 +32,55 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
+
+    def values(self):
+        values = []
+        stack = [self]
+        
+        while stack:
+            # pop next node for processing
+            curr = stack.pop(0)
+
+            if curr:
+                # append node value
+                values.append(curr.val)
+    
+                # add children to stack for processing
+                if curr.left:
+                    stack.append(curr.left)
+                if curr.right:
+                    # if right child only
+                    if not curr.left:
+                        stack.append(None)
+                    stack.append(curr.right)
+            else:
+                values.append(None)
+
+
+        return values
+
+    def __repr__(self):
+        return str(self.values())
+
+
+    def build(self, values: list[int]) -> 'TreeNode':
+        head = TreeNode(values.pop(0), None, None)
+        stack = [head]
+
+        while stack:
+            # pop next node for updates
+            curr = stack.pop(0)
+
+            # update left,right pointers of current node
+            if values:
+                curr.left = TreeNode(values.pop(0), None, None)
+            if values:
+                curr.right = TreeNode(values.pop(0), None, None)
+
+            # append new nodes to stack
+            if curr.left:
+                stack.append(curr.left)
+            if curr.right:
+                stack.append(curr.right)
+
+        return head
