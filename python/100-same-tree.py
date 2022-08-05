@@ -1,6 +1,6 @@
 from reuse import TreeNode
 
-class Solution:
+class NeetSolution:
     def isSameTree(self, p: TreeNode, q: TreeNode) -> bool:
         
         def dfs(p: TreeNode, q: TreeNode) -> bool:
@@ -23,6 +23,6 @@ tests = [
 ]
 
 for p,q,solution in tests:
-    sol = Solution()
+    sol = NeetSolution()
     sol = sol.isSameTree(p,q)
     print( sol == solution )
