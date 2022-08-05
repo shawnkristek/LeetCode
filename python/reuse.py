@@ -64,6 +64,9 @@ class TreeNode:
 
 
     def build(self, values: list[int]) -> 'TreeNode':
+        if not values:
+            return None
+
         head = TreeNode(values.pop(0), None, None)
         stack = [head]
 
