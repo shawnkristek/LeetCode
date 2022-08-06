@@ -1,3 +1,5 @@
+from collections import deque
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -35,11 +37,11 @@ class TreeNode:
 
     def values(self):
         values = []
-        stack = [self]
+        q = deque([self])
         
-        while stack:
+        while q:
             # pop next node for processing
-            curr = stack.pop(0)
+            curr = q.popleft()
 
             if curr:
                 # append node value
@@ -47,12 +49,12 @@ class TreeNode:
     
                 # add children to stack for processing
                 if curr.left:
-                    stack.append(curr.left)
+                    q.append(curr.left)
                 if curr.right:
                     # if right child only
                     if not curr.left:
-                        stack.append(None)
-                    stack.append(curr.right)
+                        q.append(None)
+                    q.append(curr.right)
             else:
                 values.append(None)
 
@@ -68,22 +70,28 @@ class TreeNode:
             return None
 
         head = TreeNode(values.pop(0), None, None)
-        stack = [head]
+        q = deque([head])
 
-        while stack:
+        while q:
             # pop next node for updates
-            curr = stack.pop(0)
+            curr = q.popleft()
 
             # update left,right pointers of current node
             if values:
-                curr.left = TreeNode(values.pop(0), None, None)
+                if values[0] is None:
+                    values.pop(0)
+                else:
+                    curr.left = TreeNode(values.pop(0), None, None)
             if values:
-                curr.right = TreeNode(values.pop(0), None, None)
+                if values[0] is None:
+                    values.pop(0)
+                else:
+                    curr.right = TreeNode(values.pop(0), None, None)
 
-            # append new nodes to stack
+            # append new nodes to q
             if curr.left:
-                stack.append(curr.left)
+                q.append(curr.left)
             if curr.right:
-                stack.append(curr.right)
+                q.append(curr.right)
 
         return head
