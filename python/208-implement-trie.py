@@ -1,54 +1,47 @@
 from collections import defaultdict, deque
 
-class Solution:
+class Solution: # Trie class
     def __init__(self):
         self.children = defaultdict()
         self.eow = False
+
+    def __traverse(self, s: str) : # -> tuple(bool, 'Solution')
+        letters = deque(s)
+        node = self
+
+        while letters:
+            c = letters.popleft()
+            if c in node.children:
+                node = node.children[c]
+            else:
+                return (False, node)
+
+        return (True, node)
 
     def insert(self, word: str) -> None:
         letters = deque(word)
         node = self
 
         while letters:
-            # grab next letter in word
             c = letters.popleft()
-            # if letter in pointers, next node
             if c in node.children:
                 node = node.children[c]
-            # create new node and add to children of current node
             else:
-                node.children[c] = Trie()
-                # next node
+                node.children[c] = Solution()
                 node = node.children[c]
 
         # last node is end-of-word
         node.eow = True
 
     def search(self, word: str) -> bool:
-        letters = deque(word)
-        node = self
+        found, node = self.__traverse(word)
 
-        while letters:
-            c = letters.popleft()
-            if c in node.children:
-                node = node.children[c]
-            else:
-                return False
-
-        return node.eow
+        return node.eow and found 
 
     def startsWith(self, prefix: str) -> bool:
-        letters = deque(prefix)
-        node = self
+        found, node = self.__traverse(prefix)
 
-        while letters:
-            c = letters.popleft()
-            if c in node.children:
-                node = node.children[c]
-            else:
-                return False
-
-        return True
+        return found
 
 class NeetNode:
     def __init__(self):
@@ -88,7 +81,7 @@ class NeetSolution:
 
 # test
 
-trie = NeetSolution()
+trie = Solution()
 trie.insert("apple")
 print( trie.search("apple") == True )
 print( trie.search("app") == False )
