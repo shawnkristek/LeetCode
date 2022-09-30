@@ -1,13 +1,19 @@
 from reuse import TreeNode
+from collections import deque
 
 class Solution:
+<<<<<<< HEAD
     # Fails test with one child node
     def invertTree(root: TreeNode) -> TreeNode:
         stack = [root] if root else []
+=======
+    def invertTree(self, root: TreeNode) -> TreeNode:
+        q = deque([root] if root else [])
+>>>>>>> e6a3b4c2fba315aedd4024bda7b3bd9fa857a44e
 
-        while stack:
+        while q:
             # grab next node for processing
-            curr = stack.pop(0)
+            curr = q.popleft()
 
             # swap left and right
             if curr:
@@ -15,11 +21,11 @@ class Solution:
                 curr.left = curr.right
                 curr.right = tmp
 
-                # add children to stack
+                # add children to q
                 if curr.left:
-                    stack.append(curr.left)
+                    q.append(curr.left)
                 if curr.right:
-                    stack.append(curr.right)
+                    q.append(curr.right)
 
         return root
 
@@ -47,8 +53,7 @@ tests = [
 ]
 
 for root,solution in tests:
-    sol = NeetSolution()
-    sol = sol.invertTree(root)
+    sol = Solution().invertTree(root)
     sol = (sol.values()) if sol else sol
     # print(sol)
     print( sol == solution)
