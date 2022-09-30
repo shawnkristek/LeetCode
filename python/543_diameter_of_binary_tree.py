@@ -4,7 +4,7 @@ class NeetSolution:
     def diameterOfBinaryTree(self, root: TreeNode) -> int:
         res = [0]
 
-        def dfs(root):
+        def dfs(root: TreeNode):
             if not root:
                 return -1
 
