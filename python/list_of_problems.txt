@@ -1,5 +1,5 @@
 15		3Sum
-2		Add Two Numbers
+2		  Add Two Numbers
 110		Balanced Binary Tree
 121		Best Time To Buy And Sell Stock
 704		Binary Search
@@ -11,7 +11,7 @@
 105		Construct Binary Tree From Preorder And Inorder Traversal
 11		Container With Most Water
 217		Contains Duplicate
-138     Copy List With Random Pointer
+138   Copy List With Random Pointer
 1448	Count Good Nodes In Binary Tree
 739		Daily Temperatures
 543		Diameter Of Binary Tree
@@ -19,26 +19,32 @@
 150		Evaluate Reverse Polish Notation
 153		Find Minimum In Rotated Sorted Array
 287		Find The Duplicate Number
+134   Gas Station
 22		Generate Parentheses
 49		Group Anagrams
+846   Hand of Straights
 226		Invert Binary Tree
+55    Jump Game
+45    Jump Game II
 875		Koko Eating Bananas
 230		Kth Smallest Element In A Bst
 84		Largest Rectangle In Histogram
 141		Linked List Cycle
 128		Longest Consecutive Sequence
 424		Longest Repeating Character Replacement
-3		Longest Substring Without Repeating Characters
+3		  Longest Substring Without Repeating Characters
 235		Lowest Common Ancestor Of A Binary Search Tree
 146		Lru Cache
 643		Maximum Average Subarray
 104		Maximum Depth Of Binary Tree
-4		Median Of Two Sorted Arrays
+4		  Median Of Two Sorted Arrays
 23		Merge K Sorted Lists
+1899  Merge Triplets to form Target Triplet
 21		Merge Two Sorted Lists
 155		Min Stack
 209		Minimum Size Subarray Sum
 76		Minimum Window Substring
+763   Partition Labels
 567		Permutation In String
 238		Product Of Array Except Self
 19		Remove Nth Node From End Of List
@@ -54,10 +60,11 @@
 981		Time Based Key Value Store
 347		Top K Frequent Elements
 42		Trapping Rain Water
-1		Two Sum
+1		  Two Sum
 167		Two Sum II Input Array Is Sorted
 242		Valid Anagram
 125		Valid Palindrome
 20		Valid Parentheses
+678   Valid Parenthesis String
 36		Valid Sudoku
 98		Validate Binary Search Tree
