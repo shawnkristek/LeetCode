@@ -1,3 +1,5 @@
+import os
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -26,3 +28,10 @@ class ListNode:
             next = ListNode(v, next)
 
         return next
+
+def rename():
+    for file in os.listdir('.'):
+        if file.endswith('.py'):
+            if file.find('-') > -1:
+                new = file.replace('-','_')
+                os.rename(file, new)
