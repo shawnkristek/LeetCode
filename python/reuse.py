@@ -1,4 +1,4 @@
-import os
+import os, re
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -35,3 +35,23 @@ def rename():
             if file.find('-') > -1:
                 new = file.replace('-','_')
                 os.rename(file, new)
+
+def alphaFiles():
+    titles = []
+    for file in os.listdir('.'):
+        if file.endswith('.py'):
+            number = file.split('_',1)[0]
+            name = re.sub("\d+_","", file)
+            name = re.sub("_"," ", name)
+            name = re.sub(".py","", name)
+            name = name.title()
+            titles.append((name,number))
+    titles.sort()
+    for title in titles:
+        tabs = '\t\t'
+        if len(title[1]) == 4:
+            tabs = '\t'
+        print(f'{title[1]}{tabs}{title[0]}')
+
+if __name__ == '__main__':
+    alphaFiles()
