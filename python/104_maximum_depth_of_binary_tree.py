@@ -1,7 +1,7 @@
 from reuse import TreeNode
 from collections import deque
 
-class Brute:
+class Brute: # iterative DFS
     def maxDepth(self, root: TreeNode) -> int:
         stack = [[root, 1]]
         res = 0
@@ -15,7 +15,7 @@ class Brute:
                 stack.append([node.right, depth + 1])
         return res
 
-class Recursive:
+class Recursive: #DFS
     def maxDepth(self, root: TreeNode) -> int:
         if not root:
             return 0
@@ -24,7 +24,7 @@ class Recursive:
 
         return depth  
 
-class Brute2:
+class Brute2: # BFS
     def maxDepth(self, root: TreeNode) -> int:
         if not root:
             return 0
