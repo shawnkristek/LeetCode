@@ -268,21 +268,21 @@ Regular Expression Matching
 
 # Greedy
 
-Maximum Subarray
+53 Maximum Subarray
 
-Jump Game
+55 Jump Game
 
-Jump Game II
+45 Jump Game II
 
-Gas Station
+134 Gas Station
 
-Hand of Straights
+846 Hand of Straights
 
-Merge Triplets to Form Target Triplet
+1899 Merge Triplets to Form Target Triplet
 
-Partition Labels
+763 Partition Labels
 
-Valid Parenthesis String
+678 Valid Parenthesis String
 
 # Intervals
 
