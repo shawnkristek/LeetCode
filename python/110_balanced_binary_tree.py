@@ -14,6 +14,25 @@ class NeetSolution:
 
         return dfs(root)[0]
 
+# class Solution:
+#     def __init__(self):
+#         self.balanced = True
+
+#     def isBalanced(self, root: TreeNode) -> bool:
+    
+#         def dfs(self, root: TreeNode) -> int:
+#             if root is None:
+#                 return 0
+    
+#             left = self.dfs(root.left)
+#             right = self.dfs(root.right)
+    
+#             self.balanced = self.balanced and abs(left - right) <= 1
+    
+#             return 1 + max(left, right)
+    
+#         return self.balanced
+
 
 # test
 tests = [ 
@@ -25,5 +44,4 @@ tests = [
 for root,solution in tests:
     sol = NeetSolution()
     sol = sol.isBalanced(root)
-    print(sol, solution)
     print( sol == solution )
