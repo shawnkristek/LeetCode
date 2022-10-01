@@ -1,20 +1,22 @@
 from reuse import TreeNode
 
 class NeetSolution:
-    def diameterOfBinaryTree(self, root: TreeNode) -> int:
-        res = [0]
+    def __init__(self):
+        self.result = 0
 
-        def dfs(root: TreeNode):
+    def diameterOfBinaryTree(self, root: TreeNode) -> int:
+
+        def dfs(self, root: TreeNode):
             if not root:
                 return -1
 
             left, right = dfs(root.left), dfs(root.right)
-            res[0] = max(res[0], 2 + left + right)
+            self.result = max(self.result, 2 + left + right)
 
             return 1 + max(left, right)
 
         dfs(root)
-        return res[0]
+        return self.result
 
 class Solution1:
     def __init__(self):
