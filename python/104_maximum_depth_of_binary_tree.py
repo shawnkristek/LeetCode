@@ -1,16 +1,7 @@
 from reuse import TreeNode
 from collections import deque
 
-class DFS: # recursive DFS
-    def maxDepth(self, root: TreeNode) -> int:
-        if not root:
-            return 0
-
-        depth = 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
-
-        return depth
-
-class DFS2: # iterative DFS
+class Brute: # iterative DFS
     def maxDepth(self, root: TreeNode) -> int:
         stack = [[root, 1]]
         res = 0
@@ -24,7 +15,16 @@ class DFS2: # iterative DFS
                 stack.append([node.right, depth + 1])
         return res
 
-class BFS:
+class Recursive: #DFS
+    def maxDepth(self, root: TreeNode) -> int:
+        if not root:
+            return 0
+
+        depth = 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+
+        return depth  
+
+class Brute2: # BFS
     def maxDepth(self, root: TreeNode) -> int:
         if not root:
             return 0
@@ -41,13 +41,14 @@ class BFS:
             level += 1
         return level
 
+
 # test
 tests = [ 
-    (TreeNode().build([3,9,20,None,None,15,7]), 3),
-    (TreeNode().build([1,None,2]),              2),
+    (TreeNode().build([3,9,20,None,None,15,7]),     3),
+    (TreeNode().build([1,None,2]),                  2),
 ]
 
 for root,solution in tests:
-    sol = DFS()
+    sol = Recursive()
     sol = sol.maxDepth(root)
     print( sol == solution )
