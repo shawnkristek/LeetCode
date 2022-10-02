@@ -134,11 +134,11 @@
 
 # Tries
 
-Implement Trie Prefix Tree
+208 Implement Trie Prefix Tree
 
-Design Add and Search Words Data Structure
+211 Design Add and Search Words Data Structure
 
-Word Search II
+212 Word Search II
 
 # Heap / Priority Queue
 

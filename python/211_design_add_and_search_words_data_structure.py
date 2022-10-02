@@ -78,6 +78,35 @@ class NeetSolution:
 
         return dfs(0, self.root)
 
+class WordDictionary:   
+    def __init__(self):
+        self.trie = {}
+
+    def addWord(self, word: str) -> None:
+        curr = self.trie
+        for char in word:
+            if char not in curr:
+                curr[char] = {}
+            curr = curr[char]
+        curr['#'] = True        
+
+    def search(self, word: str) -> bool:
+        return self.match(self.trie, word, 0)
+    
+    def match(self, node, word, index):
+        if index == len(word): 
+            return '#' in node
+        
+        if word[index]=='.':
+            for child in node:
+                if child!='#' and self.match(node[child], word, index+1):
+                    return True 
+            return False 
+            
+        if word[index] not in node: 
+            return False        
+        return self.match(node[word[index]], word, index+1)    
+
 
 # test
 
