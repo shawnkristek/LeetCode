@@ -15,6 +15,7 @@
 1448 Count Good Nodes In Binary Tree
 338  Counting Bits
 739  Daily Temperatures
+211  Design Add And Search Words Data Structure
 355  Design Twitter
 2013 Detect Squares
 543  Diameter Of Binary Tree
@@ -28,6 +29,7 @@
 49   Group Anagrams
 846  Hand of Straights
 202  Happy Number
+208  Implement Trie Prefix Tree
 226  Invert Binary Tree
 55   Jump Game
 45   Jump Game II
@@ -90,3 +92,4 @@
 678  Valid Parenthesis String
 36   Valid Sudoku
 98   Validate Binary Search Tree
+212  Word Search II
