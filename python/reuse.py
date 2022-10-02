@@ -48,10 +48,13 @@ def alphaFiles():
             titles.append((name,number))
     titles.sort()
     for title in titles:
-        tabs = '\t\t'
-        if len(title[1]) == 4:
-            tabs = '\t'
-        print(f'{title[1]}{tabs}{title[0]}')
+        spaces = ' ' * (5 - len(title[1]))
+        print(f'{title[1]}{spaces}{title[0]}')
 
 if __name__ == '__main__':
-    alphaFiles()
+    import sys
+
+    if str(sys.argv[1]) == 'rename':
+        rename()
+    else:
+        alphaFiles()
