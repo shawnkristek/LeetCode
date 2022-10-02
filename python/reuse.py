@@ -1,4 +1,4 @@
-from collections import deque, defaultdict
+import os, re
 
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -29,112 +29,32 @@ class ListNode:
 
         return next
 
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
+def rename():
+    for file in os.listdir('.'):
+        if file.endswith('.py'):
+            if file.find('-') > -1:
+                new = file.replace('-','_')
+                os.rename(file, new)
 
-    def values(self):
-        values = []
-        q = deque([self])
-        
-        while q:
-            # pop next node for processing
-            curr = q.popleft()
+def alphaFiles():
+    titles = []
+    for file in os.listdir('.'):
+        if file.endswith('.py'):
+            number = file.split('_',1)[0]
+            name = re.sub("\d+_","", file)
+            name = re.sub("_"," ", name)
+            name = re.sub(".py","", name)
+            name = name.title()
+            titles.append((name,number))
+    titles.sort()
+    for title in titles:
+        spaces = ' ' * (5 - len(title[1]))
+        print(f'{title[1]}{spaces}{title[0]}')
 
-            if curr:
-                # append node value
-                values.append(curr.val)
-    
-                # add children to stack for processing
-                if curr.left:
-                    q.append(curr.left)
-                if curr.right:
-                    # if right child only
-                    if not curr.left:
-                        q.append(None)
-                    q.append(curr.right)
-            else:
-                values.append(None)
+if __name__ == '__main__':
+    import sys
 
-
-        return values
-
-    def __repr__(self):
-        return str(self.values())
-
-
-    def build(self, values: list[int]) -> 'TreeNode':
-        if not values:
-            return None
-
-        head = TreeNode(values.pop(0), None, None)
-        q = deque([head])
-
-        while q:
-            # pop next node for updates
-            curr = q.popleft()
-
-            # update left,right pointers of current node
-            if values:
-                if values[0] is None:
-                    values.pop(0)
-                else:
-                    curr.left = TreeNode(values.pop(0), None, None)
-            if values:
-                if values[0] is None:
-                    values.pop(0)
-                else:
-                    curr.right = TreeNode(values.pop(0), None, None)
-
-            # append new nodes to q
-            if curr.left:
-                q.append(curr.left)
-            if curr.right:
-                q.append(curr.right)
-
-        return head
-
-class TrieNode:
-    def __init__(self):
-        self.children = defaultdict()
-        self.eow = False
-
-    def __traverse(self, s: str) : # -> tuple(bool, 'Trie')
-        letters = deque(s)
-        node = self
-
-        while letters:
-            c = letters.popleft()
-            if c in node.children:
-                node = node.children[c]
-            else:
-                return (False, node)
-
-        return (True, node)
-
-    def insert(self, word: str) -> None:
-        letters = deque(word)
-        node = self
-
-        while letters:
-            c = letters.popleft()
-            if c in node.children:
-                node = node.children[c]
-            else:
-                node.children[c] = TrieNode()
-                node = node.children[c]
-
-        # last node is end-of-word
-        node.eow = True
-
-    def search(self, word: str) -> bool:
-        found, node = self.__traverse(word)
-
-        return node.eow and found 
-
-    def startsWith(self, prefix: str) -> bool:
-        found, node = self.__traverse(prefix)
-
-        return found
+    if str(sys.argv[1]) == 'rename':
+        rename()
+    else:
+        alphaFiles()
