@@ -142,19 +142,19 @@ Word Search II
 
 # Heap / Priority Queue
 
-Kth Largest Element in a Stream
+703 Kth Largest Element in a Stream
 
-Last Stone Weight
+1046 Last Stone Weight
 
-K Closest Points to Origin
+973 K Closest Points to Origin
 
-Kth Largest Element in an Array
+215 Kth Largest Element in an Array
 
-Task Scheduler
+621 Task Scheduler
 
-Design Twitter
+355 Design Twitter
 
-Find Median from Data Stream
+295 Find Median from Data Stream
 
 # Backtracking
 

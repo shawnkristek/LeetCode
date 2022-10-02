@@ -15,10 +15,12 @@
 1448 Count Good Nodes In Binary Tree
 338  Counting Bits
 739  Daily Temperatures
+355  Design Twitter
 2013 Detect Squares
 543  Diameter Of Binary Tree
 271  Encode And Decode Strings
 150  Evaluate Reverse Polish Notation
+295  Find Median From Data Stream
 153  Find Minimum In Rotated Sorted Array
 287  Find The Duplicate Number
 134  Gas Station
@@ -30,8 +32,12 @@
 55   Jump Game
 45   Jump Game II
 875  Koko Eating Bananas
+973  K Closest Points To Origin
+215  Kth Largest Element In An Array
+703  Kth Largest Element In A Stream
 230  Kth Smallest Element In A Bst
 84   Largest Rectangle In Histogram
+1046 Last Stone Weight
 141  Linked List Cycle
 128  Longest Consecutive Sequence
 424  Longest Repeating Character Replacement
@@ -72,6 +78,7 @@
 54   Spiral Matrix
 572  Subtree Of Another Tree
 371  Sum Of Two Integers
+621  Task Scheduler
 981  Time Based Key Value Store
 347  Top K Frequent Elements
 42   Trapping Rain Water
