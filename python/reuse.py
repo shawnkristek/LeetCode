@@ -52,4 +52,10 @@ def alphaFiles():
         print(f'{title[1]}{spaces}{title[0]}')
 
 if __name__ == '__main__':
-    alphaFiles()
+    import sys
+
+    if str(sys.argv[1]) == 'rename':
+        rename()
+    else:
+        alphaFiles()
+
