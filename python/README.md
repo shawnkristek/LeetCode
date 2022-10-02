@@ -318,16 +318,16 @@ Minimum Interval to Include Each Query
 
 # Bit Manipulation
 
-Single Number
+136 Single Number
 
-Number of 1 Bits
+191 Number of 1 Bits
 
-Counting Bits
+338 Counting Bits
 
-Reverse Bits
+190 Reverse Bits
 
-Missing Number
+268 Missing Number
 
-Sum of Two Integers
+371 Sum of Two Integers
 
-Reverse Integer
+7 Reverse Integer

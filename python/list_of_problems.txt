@@ -13,6 +13,7 @@
 217  Contains Duplicate
 138  Copy List With Random Pointer
 1448 Count Good Nodes In Binary Tree
+338  Counting Bits
 739  Daily Temperatures
 2013 Detect Squares
 543  Diameter Of Binary Tree
@@ -46,7 +47,9 @@
 155  Min Stack
 209  Minimum Size Subarray Sum
 76   Minimum Window Substring
+268  Missing Number
 43   Multiply Strings
+191  Number Of 1 Bits
 763  Partition Labels
 567  Permutation In String
 66   Plus One
@@ -54,6 +57,8 @@
 238  Product Of Array Except Self
 19   Remove Nth Node From End Of List
 143  Reorder List
+190  Reverse Bits
+7    Reverse Integer
 206  Reverse Linked List
 25   Reverse Nodes In K Group
 48   Rotate Image
@@ -62,9 +67,11 @@
 33   Search In Rotate Sorted Array
 297  Serialize And Deserialize Binary Tree
 73   Set Matrix Zeroes
+136  Single Number
 239  Sliding Window Maximum
 54   Spiral Matrix
 572  Subtree Of Another Tree
+371  Sum Of Two Integers
 981  Time Based Key Value Store
 347  Top K Frequent Elements
 42   Trapping Rain Water
