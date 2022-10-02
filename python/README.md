@@ -300,21 +300,21 @@ Minimum Interval to Include Each Query
 
 # Math & Geometry
 
-Rotate Image
+48 Rotate Image
 
-Spiral Matrix
+54 Spiral Matrix
 
-Set Matrix Zeroes
+73 Set Matrix Zeroes
 
-Happy Number
+202 Happy Number
 
-Plus One
+66 Plus One
 
-Pow(x,n)
+50 Pow(x,n)
 
-Multiply Strings
+43 Multiply Strings
 
-Detect Squares
+2013 Detect Squares
 
 # Bit Manipulation
 
