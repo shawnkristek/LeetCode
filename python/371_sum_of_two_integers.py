@@ -58,6 +58,6 @@ tests =[
 ]
 
 for a,b,solution in tests:
-    sol = Solution()
+    sol = NeetSolution()
     sol = sol.getSum(a, b)
     print( sol == solution )
