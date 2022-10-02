@@ -64,7 +64,7 @@
 48   Rotate Image
 100  Same Tree
 74   Search A 2D Matrix
-33   Search In Rotate Sorted Array
+33   Search In Rotated Sorted Array
 297  Serialize And Deserialize Binary Tree
 73   Set Matrix Zeroes
 136  Single Number
