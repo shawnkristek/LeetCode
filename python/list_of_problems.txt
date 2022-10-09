@@ -30,6 +30,7 @@
 846  Hand of Straights
 202  Happy Number
 208  Implement Trie Prefix Tree
+57   Insert Interval
 226  Invert Binary Tree
 55   Jump Game
 45   Jump Game II
@@ -49,14 +50,19 @@
 643  Maximum Average Subarray
 104  Maximum Depth Of Binary Tree
 4    Median Of Two Sorted Arrays
+252  Meeting Rooms
+253  Meeting Rooms II
+56   Merge Intervals
 23   Merge K Sorted Lists
 1899 Merge Triplets to form Target Triplet
 21   Merge Two Sorted Lists
 155  Min Stack
+1851 Minimum Interval To Include Each Query
 209  Minimum Size Subarray Sum
 76   Minimum Window Substring
 268  Missing Number
 43   Multiply Strings
+435  Non Overlapping Intervals
 191  Number Of 1 Bits
 763  Partition Labels
 567  Permutation In String
