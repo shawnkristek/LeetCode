@@ -286,15 +286,15 @@ Regular Expression Matching
 
 # Intervals
 
-Insert Interval
+57 Insert Interval
 
-Merge Intervals
+56 Merge Intervals
 
 Non Overlapping Intervals
 
-Meeting Rooms
+252 Meeting Rooms
 
-Meeting Rooms II
+253 Meeting Rooms II
 
 Minimum Interval to Include Each Query
 
