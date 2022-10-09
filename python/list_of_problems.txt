@@ -57,10 +57,12 @@
 1899 Merge Triplets to form Target Triplet
 21   Merge Two Sorted Lists
 155  Min Stack
+1851 Minimum Interval To Include Each Query
 209  Minimum Size Subarray Sum
 76   Minimum Window Substring
 268  Missing Number
 43   Multiply Strings
+435  Non Overlapping Intervals
 191  Number Of 1 Bits
 763  Partition Labels
 567  Permutation In String

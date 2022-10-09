@@ -290,13 +290,13 @@ Regular Expression Matching
 
 56 Merge Intervals
 
-Non Overlapping Intervals
+435 Non Overlapping Intervals
 
 252 Meeting Rooms
 
 253 Meeting Rooms II
 
-Minimum Interval to Include Each Query
+1851 Minimum Interval to Include Each Query
 
 # Math & Geometry
 
